@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  web:
+    restart: always
+    ports:
+      - 5000:5000
+    environment:
+      - NAME
+    container_name: hello_web_app
+
+networks:
+  default:
+    external:
+      name: my_services
